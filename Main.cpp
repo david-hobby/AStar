@@ -316,7 +316,9 @@ void a_star_search
     cost_so_far[start] = 0;
 
     /* The frontier will grow while there are unvisited nodes that are
-    * passable that 
+    * passable that have not yet been visited and been assigned a cost.
+    * If the frontier empties without finding the goal then there is 
+    * no viable path. 
     */
     while (!frontier.empty()) 
     {
